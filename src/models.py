@@ -45,6 +45,7 @@ class Comment(Base):
     author_id = Column(Integer, ForeignKey('user.id'))
     post_id = Column(Integer, ForeignKey('post.id'))
     author_user =  relationship(User)
+    
     def to_dict(self):
         return {}
 
